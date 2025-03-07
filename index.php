@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinite Spinner</title>
+    <style>
+        /* Just some spacing and styling so they appear neatly */
+        .canvas-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .canvas-container canvas {
+            border: 1px solid #ccc;
+            width: 300px;
+            height: 150px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Infinite Spinner Examples</h1>
+<p>Below are 11 canvas elements, each showing different configurations of the infinite spinner.</p>
+
+<div class="canvas-container">
+    <canvas id="myCanvas" width="300" height="150"></canvas>
+    <canvas id="myCanvas1" width="300" height="150"></canvas>
+    <canvas id="myCanvas2" width="300" height="150"></canvas>
+    <canvas id="myCanvas3" width="300" height="150"></canvas>
+    <canvas id="myCanvas4" width="300" height="150"></canvas>
+    <canvas id="myCanvas5" width="300" height="150"></canvas>
+    <canvas id="myCanvas6" width="300" height="150"></canvas>
+    <canvas id="myCanvas7" width="300" height="150"></canvas>
+    <canvas id="myCanvas8" width="300" height="150"></canvas>
+    <canvas id="myCanvas9" width="300" height="150"></canvas>
+    <canvas id="myCanvas10" width="300" height="150"></canvas>
+</div>
+
+<script src="infinite-spinner.js"></script>
+<script>
+  // 1) Default usage (arcMaxLength defaults to 80)
+  infiniteSpinner(document.getElementById('myCanvas'));
+
+  // 2) Slower spin, higher length variation, red stroke, thinner line, square lineCap,
+  //    plus arcMaxLength = 10 (very small arcs overall).
+  infiniteSpinner(document.getElementById('myCanvas1'), {
+    entireThingSpinSpeed: 0.05,
+    lengthModifierSpeed: 20,
+    strokeStyle: 'red',
+    lineWidth: 5,
+    lineCap: 'square',
+    arcMaxLength: 10
+  });
+
+  // 3) Faster spin, smaller length variation, green stroke, thick line, round lineCap,
+  //    arcMaxLength = 100 (the maximum).
+  infiniteSpinner(document.getElementById('myCanvas2'), {
+    entireThingSpinSpeed: 0.2,
+    lengthModifierSpeed: 5,
+    strokeStyle: '#2ecc71',
+    lineWidth: 10,
+    lineCap: 'round',
+    arcMaxLength: 80
+  });
+
+  // 4) Even faster spin, moderate length variation, blue stroke, thin line, butt lineCap,
+  //    arcMaxLength = 50 (a moderate value).
+  infiniteSpinner(document.getElementById('myCanvas3'), {
+    entireThingSpinSpeed: 0.4,
+    lengthModifierSpeed: 15,
+    strokeStyle: 'blue',
+    lineWidth: 3,
+    lineCap: 'butt',
+    arcMaxLength: 50
+  });
+
+  // 5) Very slow spin, small length variation, orange stroke, thick line, round lineCap,
+  //    arcMaxLength = 5 (extremely small arcs).
+  infiniteSpinner(document.getElementById('myCanvas4'), {
+    entireThingSpinSpeed: 0.01,
+    lengthModifierSpeed: 5,
+    strokeStyle: 'orange',
+    lineWidth: 12,
+    lineCap: 'round',
+    arcMaxLength: 5
+  });
+
+  // 6) Moderate spin, moderate length variation, purple stroke, medium line, square lineCap,
+  //    arcMaxLength = 95 (quite large arcs).
+  infiniteSpinner(document.getElementById('myCanvas5'), {
+    entireThingSpinSpeed: 0.15,
+    lengthModifierSpeed: 8,
+    strokeStyle: '#9b59b6',
+    lineWidth: 8,
+    lineCap: 'square',
+    arcMaxLength: 95
+  });
+
+  // 7) Fast spin, high length variation, teal stroke, very thin line, round lineCap,
+  //    arcMaxLength = 60.
+  infiniteSpinner(document.getElementById('myCanvas6'), {
+    entireThingSpinSpeed: 0.3,
+    lengthModifierSpeed: 25,
+    strokeStyle: '#1abc9c',
+    lineWidth: 2,
+    lineCap: 'round',
+    arcMaxLength: 60
+  });
+
+  // 8) Very fast spin, moderate length variation, black stroke, extremely thin line, round lineCap,
+  //    arcMaxLength = 20.
+  infiniteSpinner(document.getElementById('myCanvas7'), {
+    entireThingSpinSpeed: 0.5,
+    lengthModifierSpeed: 10,
+    strokeStyle: 'black',
+    lineWidth: 1,
+    lineCap: 'round',
+    arcMaxLength: 20
+  });
+
+  // 9) Normal spin, very small length variation, yellow stroke, very thick line, butt lineCap,
+  //    arcMaxLength = 99 (nearly the max).
+  infiniteSpinner(document.getElementById('myCanvas8'), {
+    entireThingSpinSpeed: 0.1,
+    lengthModifierSpeed: 3,
+    strokeStyle: 'yellow',
+    lineWidth: 15,
+    lineCap: 'butt',
+    arcMaxLength: 99
+  });
+
+  // 10) Slower spin, large length variation, dark gray stroke, medium line, square lineCap,
+  //     arcMaxLength = 80 (the default, but let's specify it).
+  infiniteSpinner(document.getElementById('myCanvas9'), {
+    entireThingSpinSpeed: 0.05,
+    lengthModifierSpeed: 30,
+    strokeStyle: '#34495e',
+    lineWidth: 6,
+    lineCap: 'square',
+    arcMaxLength: 80
+  });
+
+  // 11) Moderate spin, moderate variation, golden stroke, small line, round lineCap,
+  //     arcMaxLength = 40 (somewhere in the mid range).
+  infiniteSpinner(document.getElementById('myCanvas10'), {
+    entireThingSpinSpeed: 0.25,
+    lengthModifierSpeed: 12,
+    strokeStyle: '#f1c40f',
+    lineWidth: 5,
+    lineCap: 'round',
+    arcMaxLength: 40
+  });
+</script>
+
+</body>
+</html>
