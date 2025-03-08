@@ -44,7 +44,7 @@ infiniteSpinner(document.getElementById('myCanvas1'), {
 ```
 
 The following options are available:
-
+ 
 - **entireThingSpinSpeed**: Speed at which the entire spinner rotates. Higher values make it spin faster. Default is `0.1`.
 - **lengthModifierSpeed**: Speed at which the spinner's arc length changes. Higher values make it slower. Default is `10`.
 - **strokeStyle**: The color or style to use for the spinner's stroke. Default is `'#e74c3c'`.
